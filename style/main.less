@@ -1,0 +1,430 @@
+
+/*
+ +-------------------------------------------------------------------+
+ |                      PERSONAL REMINDER                            |
+ |                                                                   |
+ | Copyright Balázs Panghy (panghyba@gmail.com)                      |
+ | Last modified: 2013-04-29                                         |
+ +-------------------------------------------------------------------+
+ | This program may be used and hosted free of charge by anyone for  |
+ | personal purpose as long as this copyright notice remains intact. |
+ +-------------------------------------------------------------------+
+*/
+
+/*
++--------------------------------------------------------------------------------------------------------+
+| This code is part of the Personal Reminder software, copyright by Balázs Panghy (panghyba@gmail.com)   |
+| Obtain permission before selling this code, hosting it on a commercial website or redistributing       |
+| it over the Internet or in any other medium. In all cases copyright must remain intact!                |
++--------------------------------------------------------------------------------------------------------+
+*/
+
+//========================================================================================================
+// Color settings
+//========================================================================================================
+
+// Background
+@bodyBgColor:darkgray;
+
+// Main colors
+@primaryColor:darkgray;
+@secondaryColor:gray;
+@thirdColor:rgb(51,110,165);
+
+// Inputfields background
+@fieldBgColor:white;
+
+//========================================================================================================
+// Dimension settings
+//========================================================================================================
+
+// Main dimensions (canvas)
+@mainWidth:1822px;
+@mainHeight:920px;
+
+// Module dimensions (3 big boxes inside)
+@moduleWidth:590px;
+@moduleHeight:760px;
+
+//========================================================================================================
+// Border settings
+//========================================================================================================
+
+// http://www.w3schools.com/css/css_border.asp
+@borderStyle:solid;
+@borderRadius:2em;
+@borderThickness:2px;
+
+//========================================================================================================
+// Padding settings
+//========================================================================================================
+
+@paddingPrimary:20px;
+@paddingSecondary:10px;
+@divPaddingDefault:5px;
+
+//========================================================================================================
+// Login site settings (index.php)
+//========================================================================================================
+
+// Main width
+@loginWidth:500px;
+
+// Box width inside
+@loginWidthInside:300px;
+
+// Margin from the top of the page
+@loginTopMargin:50px;
+
+// Inputfields (name, password)
+@loginFieldWidth:10em;
+
+// Status box width
+@loginErrorWidth:170px;
+
+//========================================================================================================
+// Form elements settings
+//========================================================================================================
+
+@inputfieldWidth:20em;
+@buttonWidth:100px;
+
+//========================================================================================================
+// Table settings inside the modules (1st/2nd column)
+//========================================================================================================
+
+@tableLeftWidth:450px;
+@tableRightWidth:120px;
+
+//========================================================================================================
+// Occasion module settings
+//========================================================================================================
+
+// First column (date)
+@dateCellWidth:100px;
+
+// Occasion column
+@dateOccWidth:400px;
+
+// Days left column
+@dateRightWidth:150px;
+
+//========================================================================================================
+// Footer settings
+//========================================================================================================
+
+// Shifting from the left side of the page to center the middle box
+@footerMod:606px;
+
+// Status box width (left side)
+@infoDivWidth:220px;
+
+// Middle box (refresh, logout, date)
+@midDivWidth:580px;
+
+
+body
+{
+background-color:@bodyBgColor;
+}
+
+h2
+{
+padding-left:@paddingPrimary;
+padding-top:@paddingPrimary;
+}
+
+.login_container
+{
+width:@loginWidth;
+margin-left:auto;
+margin-right:auto;
+margin-top:@loginTopMargin;
+background-color:@secondaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @thirdColor;
+}
+
+.login_div
+{
+width:@loginWidthInside;
+background-color:@primaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+margin-left:auto;
+margin-right:auto;
+}
+
+.login_table
+{
+padding:@paddingPrimary;
+margin-left:auto;
+margin-right:auto;
+font-weight:bold;
+}
+
+.login_table td
+{
+padding:@paddingSecondary;
+}
+
+.login_inputfield
+{
+width:@loginFieldWidth;
+border:@borderStyle @borderThickness @thirdColor;
+}
+
+.submit
+{
+width:@buttonWidth;
+border-color:@thirdColor;
+background-color:@secondaryColor;
+font-weight:bold;
+margin-left:@paddingPrimary;
+}
+
+.submit:hover
+{
+border-color:@secondaryColor;
+background-color:@thirdColor;
+}
+
+.login_error_div
+{
+width:@loginErrorWidth;
+background-color:@secondaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:@paddingPrimary;
+padding:@divPaddingDefault;
+text-align:center;
+font-weight:bold;
+}
+
+.login_footer
+{
+font-style:italic;
+text-align:center;
+padding-bottom:@paddingPrimary;
+}
+
+.link, .link:visited
+{
+text-decoration:none;
+font-style:normal;
+color:black;
+}
+
+.link:hover
+{
+color:@thirdColor;
+}
+
+.main_container
+{
+width:@mainWidth;
+height:@mainHeight;
+margin-left:auto;
+margin-right:auto;
+background-color:@secondaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+}
+
+.note_container
+{
+width:@moduleWidth;
+height:@moduleHeight;
+background-color:@primaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+margin-left:@paddingSecondary;
+margin-right:@paddingSecondary;
+float:left;
+}
+
+.date_container
+{
+width:@moduleWidth;
+height:@moduleHeight;
+background-color:@primaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+margin-right:@paddingSecondary;
+float:left;
+}
+
+.upload_container
+{
+width:@moduleWidth;
+height:@moduleHeight;
+background-color:@primaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+float:left;
+}
+
+.inputfield
+{
+width:@inputfieldWidth;
+border:@borderStyle @borderThickness @thirdColor;
+background-color:@fieldBgColor;
+margin-left:@paddingPrimary;
+}
+
+.select
+{
+border:@borderStyle @borderThickness @thirdColor;
+margin-left:@paddingPrimary;
+}
+
+.line
+{
+margin-top:@paddingPrimary;
+margin-bottom:@paddingPrimary;
+color:@thirdColor;
+}
+
+.main_footer
+{
+clear:both;
+padding-top:@paddingSecondary;
+padding-bottom:@paddingSecondary;
+text-align:center;
+font-style:italic;
+}
+
+.footer_table_mod
+{
+width:@footerMod;
+}
+
+.footer_div_left
+{
+width:@infoDivWidth;
+background-color:@primaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+float:left;
+font-weight:bold;
+font-style:normal;
+padding:@divPaddingDefault;
+margin-left:@paddingSecondary;
+}
+
+.footer_div_mid
+{
+width:@midDivWidth;
+background-color:@primaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+padding:@divPaddingDefault;
+font-style:normal;
+}
+
+.footer_div_right
+{
+width:@infoDivWidth;
+background-color:@primaryColor;
+border-radius:@borderRadius;
+border:@borderStyle @borderThickness @thirdColor;
+float:right;
+font-style:italic;
+padding:@divPaddingDefault;
+margin-right:@paddingSecondary;
+}
+
+.table_header
+{
+margin:0px 0px 0px @paddingPrimary;
+font-size:large;
+font-weight:bold;
+padding-left:@paddingSecondary;
+padding-bottom:@paddingSecondary;
+}
+
+.table_left
+{
+margin:0px 0px 0px @paddingPrimary;
+font-size:large;
+font-weight:bold;
+width:@tableLeftWidth;
+}
+
+.table_left:hover
+{
+color:@thirdColor;
+}
+
+.table_right
+{
+margin:0px 0px 0px @paddingPrimary;
+font-size:large;
+font-weight:bold;
+width:@tableRightWidth;
+}
+
+.table_right:hover
+{
+color:@thirdColor;
+}
+
+.p_center
+{
+padding-left:@paddingPrimary;
+font-size:large;
+font-weight:bold;
+text-align:center;
+}
+
+.date
+{
+background-color:@fieldBgColor;
+border:@borderStyle @borderThickness @thirdColor;
+text-align:center;
+font-weight:bold;
+width:@dateCellWidth;
+padding:@paddingSecondary;
+font-size:large;
+font-weight:bold;
+}
+
+.date:hover
+{
+background-color:@thirdColor;
+border-color:@secondaryColor;
+}
+
+.date_occ
+{
+width:@dateOccWidth;
+font-weight:bold;
+font-size:large;
+padding-left:@paddingSecondary;
+}
+
+.date_occ:hover
+{
+color:@thirdColor;
+}
+
+.date_right
+{
+width:@dateRightWidth;
+font-weight:bold;
+font-size:large;
+}
+
+.date_right:hover
+{
+color:@thirdColor;
+}
+
+.file_sum
+{
+margin-bottom:@paddingPrimary;
+text-align:center;
+font-style:italic;
+}

@@ -1,0 +1,36 @@
+PERSONAL REMINDER
+
+Last modified: 2013-04-29
+
+========================================================================================================
+ Database
+========================================================================================================
+
+ - These are the SQL commands for creating your MySQL database and tables.
+ - Or use any visual tool to create them (phpMyAdmin e.g.).
+
+========================================================================================================
+ DO NOT CHANGE THESE NAMES/TYPES !!!
+ Your database name can be arbitrary (change it in the function/congig.php too!)
+========================================================================================================
+
+
+CREATE DATABASE reminder;
+
+CREATE TABLE login (
+loginId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+loginName VARCHAR(25),
+loginPasswd CHAR(40)
+);
+
+CREATE TABLE notes (
+noteId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+noteText VARCHAR(255),
+notePrior INT
+);
+
+CREATE TABLE dates (
+dateId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+dateOcc VARCHAR(255),
+dateDate DATE
+);
